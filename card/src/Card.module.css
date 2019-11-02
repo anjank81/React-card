@@ -1,0 +1,49 @@
+.card {
+  position: relative;
+  width: 317px;
+  height: 550px;
+  margin: auto;
+  border: 16px black solid;
+  border-top-width: 60px;
+  border-bottom-width: 50px;
+  border-radius: 30px;
+}
+.container {
+  padding-top: 150px;
+}
+.icon {
+  position: relative;
+  bottom: 60px;
+  left: 200px;
+}
+.time {
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  left: 30px;
+  bottom: 460px;
+  font-weight: bolder;
+  font-family: inherit;
+  font-size: 35px;
+}
+.timeap {
+  color: gray;
+}
+.day {
+  color: white !important;
+  font-size: 15px;
+  display: flex;
+  position: relative;
+  top: 40px;
+  right: 65px;
+}
+.weather {
+  color: white !important;
+  font-size: 40px;
+  display: flex;
+  position: relative;
+  bottom: 470px;
+  right: 20px;
+  left: 235px;
+}
