@@ -10,7 +10,7 @@ class Card extends Component {
           <div className={style.weather}>{"12°"}</div>
           <div className={style.time}>
             <div> 05:07</div>
-            <div className={style.timeap}>{"p.m"}</div>
+            <div className={style.convention}>{"p.m"}</div>
             <br />
             <div className={style.day}>{"Saturday"}</div>
           </div>
