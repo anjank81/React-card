@@ -4,9 +4,9 @@ import Image1 from "./nature.jpg";
 class Card extends Component {
   render() {
     return (
-      <div className={style.card}>
+      <div className={style.design}>
         <img src={Image1} alt="Nature Image" height="550px;" width="317px" />
-        <div className="icons">
+        <div className="container">
           <div className={style.weather}>{"12°"}</div>
           <div className={style.time}>
             <div> 05:07</div>
