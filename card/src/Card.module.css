@@ -1,4 +1,4 @@
-.card {
+.base {
   position: relative;
   width: 317px;
   height: 550px;
@@ -8,7 +8,7 @@
   border-bottom-width: 50px;
   border-radius: 30px;
 }
-.card:before {
+.base:before {
   content: "";
   display: block;
   width: 60px;
@@ -21,7 +21,7 @@
   border-radius: 10px;
 }
 
-.card:after {
+.base:after {
   content: "";
   display: block;
   width: 35px;
@@ -33,10 +33,10 @@
   background: #333;
   border-radius: 50%;
 }
-.container {
+.mainbase {
   padding-top: 150px;
 }
-.icon {
+.container {
   position: relative;
   bottom: 60px;
   left: 200px;
