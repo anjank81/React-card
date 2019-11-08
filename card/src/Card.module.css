@@ -1,3 +1,11 @@
+.api {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.main {
+  padding: 10px;
+}
 .base {
   position: relative;
   width: 317px;
@@ -26,16 +34,16 @@
   display: block;
   width: 35px;
   height: 35px;
-  position: absolute;
-  left: 50%;
-  bottom: -60px;
+  position: relative;
+  right: -165px;
+  bottom: 65px;
   transform: translate(-50%, -50%);
   background: #333;
   border-radius: 50%;
 }
-.mainbase {
+/* .mainbase {
   padding-top: 150px;
-}
+} */
 .container {
   position: relative;
   bottom: 60px;
@@ -59,9 +67,11 @@
   color: white !important;
   font-size: 15px;
   display: flex;
+  align-items: center;
   position: relative;
   top: 40px;
   right: 65px;
+  border-bottom: solid 4px white;
 }
 .weather {
   color: white !important;

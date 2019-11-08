@@ -1,29 +1,33 @@
 import React, { Component } from "react";
 import style from "./Card.module.css";
-import Image1 from "./nature.jpg";
-import Button from "./Button.js";
+import Cardcomp from "./Cardcomp";
+import axios from "axios";
 class Card extends Component {
   constructor(props) {
     super(props);
-    this.state = { name: "a.m" };
+    this.state = { users: [], isLoading: true };
   }
-  handle = () => {
-    this.setState({ name: "p.m" });
-  };
+  componentDidMount() {
+    axios.get("https://api.github.com/users").then(res => {
+      const users = res.data;
+      this.setState({ users });
+    });
+  }
+
   render() {
     return (
-      <div className={style.base}>
-        <img src={Image1} alt="Nature Image" height="550px;" width="317px" />
-        <div className="container">
-          <div className={style.weather}>{"12°"}</div>
-          <div className={style.time}>
-            <div> 05:07</div>
-            <div className={style.convention}>{this.state.name}</div>
-            <br />
-            <div className={style.day}>{"Saturday"}</div>
-          </div>
-        </div>
-        <button onClick={this.handle}>Change am to pm</button>
+      <div className={style.api}>
+        {this.state.users &&
+          this.state.users.map(usr => {
+            return (
+              <Cardcomp
+                src={usr.avatar_url}
+                login={usr.login}
+                name={this.state.name}
+                key={usr.login}
+              />
+            );
+          })}
       </div>
     );
   }
