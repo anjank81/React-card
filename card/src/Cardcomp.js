@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import action from "./action/card.action";
 
 import style from "./Card.module.css";
 
-class Cardcomp extends Component {
+export default class Cardcomp extends Component {
   render() {
     return (
       <div>
@@ -24,5 +25,3 @@ class Cardcomp extends Component {
     );
   }
 }
-
-export default Cardcomp;
