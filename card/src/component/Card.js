@@ -7,13 +7,6 @@ class Card extends Component {
     this.props && this.props.getCard();
   }
   render() {
-    console.log("git user props", this.props);
-    console.log(
-      "userData",
-      this.props.userData &&
-        this.props.userData.userData &&
-        this.props.userData.userData[0]
-    );
     return (
       <div className={style.api}>
         {this.props.userData &&

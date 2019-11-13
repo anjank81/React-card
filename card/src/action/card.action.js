@@ -1,12 +1,10 @@
 export function cardRequesting() {
-  console.log("Requesting");
   return {
     type: "CARD_REQUESTING",
     status: "Requesting"
   };
 }
 export function cardSuccess(data) {
-  console.log("Success");
   return {
     type: "CARD_SUCCESS",
     status: "Success",
@@ -14,7 +12,6 @@ export function cardSuccess(data) {
   };
 }
 export function cardFailure(error) {
-  console.log("Failure");
   return {
     type: "CARD_FAILURE",
     status: "Failure",
@@ -22,7 +19,6 @@ export function cardFailure(error) {
   };
 }
 export function getCard() {
-  console.log("Action");
   return async (dispatch, getState) => {
     dispatch(cardRequesting());
     try {

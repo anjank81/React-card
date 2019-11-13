@@ -12,9 +12,9 @@ const creatStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 const store = creatStoreWithMiddleware(CardReducer);
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
+    
       <App />
-    </BrowserRouter>
+  
   </Provider>,
   document.getElementById("root")
 );
