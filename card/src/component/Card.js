@@ -16,12 +16,10 @@ class Card extends Component {
               <Cardcomp
                 src={usr.avatar_url}
                 login={usr.login}
-                name={this.props.name}
                 key={usr.login}
               />
             );
           })}
-        HI
       </div>
     );
   }

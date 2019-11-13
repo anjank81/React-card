@@ -1,6 +1,10 @@
+import axios from "axios";
+export const CARD_REQUESTING = "CARD_REQUESTING";
+export const CARD_SUCCESS = "CARD_SUCCESS";
+export const CARD_FAILURE = "CARD_FAILURE";
 export function cardRequesting() {
   return {
-    type: "CARD_REQUESTING",
+    type: CARD_REQUESTING,
     status: "Requesting"
   };
 }
@@ -22,12 +26,13 @@ export function getCard() {
   return async (dispatch, getState) => {
     dispatch(cardRequesting());
     try {
-      const result = await fetch("http://api.github.com/users");
-      if (result.error) {
-        throw result.error;
-      }
-      const resultJson = await result.json();
-      return dispatch(cardSuccess(resultJson));
+      axios.get("http://api.github.com/users").then(res => {
+        if (res.error) {
+          throw res.error;
+        }
+        const users = res.data;
+        return dispatch(cardSuccess(users));
+      });
     } catch (e) {
       return dispatch(cardFailure(e.message));
     }

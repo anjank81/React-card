@@ -1,3 +1,4 @@
+import * as Action from "../action/card.action";
 const cardReducer = (
   state = {
     loading: false,
@@ -8,15 +9,15 @@ const cardReducer = (
   action
 ) => {
   switch (action.type) {
-    case "CARD_REQUESTING":
+    case Action.CARD_REQUESTING:
       return Object.assign({}, state, { loading: true, status: action.status });
-    case "CARD_SUCCESS":
+    case Action.CARD_SUCCESS:
       return Object.assign({}, state, {
         loading: false,
         userData: action.userData,
         status: action.status
       });
-    case "CARD_FAILURE":
+    case Action.CARD_FAILURE:
       return Object.assign({}, state, {
         loading: false,
         error: action.error,
