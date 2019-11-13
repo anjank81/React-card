@@ -10,14 +10,14 @@ export function cardRequesting() {
 }
 export function cardSuccess(data) {
   return {
-    type: "CARD_SUCCESS",
+    type: CARD_SUCCESS,
     status: "Success",
     userData: data
   };
 }
 export function cardFailure(error) {
   return {
-    type: "CARD_FAILURE",
+    type: CARD_FAILURE,
     status: "Failure",
     error
   };
